@@ -1,38 +1,21 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { ChevronUp } from 'lucide-react'
+import { useEffect } from 'react'
 
 export function ScrollToTop() {
-  const [isVisible, setIsVisible] = useState(false)
-
   useEffect(() => {
-    const toggleVisibility = () => {
+    const handleScroll = () => {
       if (window.pageYOffset > 300) {
-        setIsVisible(true)
-      } else {
-        setIsVisible(false)
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        })
       }
     }
 
-    window.addEventListener('scroll', toggleVisibility)
-    return () => window.removeEventListener('scroll', toggleVisibility)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
-
-  return (
-    <button
-      className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
-      onClick={scrollToTop}
-      aria-label="Scroll to top"
-    >
-      <ChevronUp className="h-6 w-6" />
-    </button>
-  )
+  return null
 }
