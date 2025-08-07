@@ -182,38 +182,6 @@ html {
   @apply bg-white hover:bg-gray-50 text-purple-600 font-semibold py-3 px-8 rounded-xl border-2 border-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl;
 }
 
-/* Scroll to top button */
-.scroll-to-top {
-  position: fixed;
-  bottom: 100px;
-  right: 24px;
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  z-index: 40;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-}
-
-.scroll-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.scroll-to-top:hover {
-  transform: translateY(-5px) scale(1.1);
-  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-}
-
 /* Banner slider */
 .banner-slider {
   position: relative;
