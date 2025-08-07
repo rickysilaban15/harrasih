@@ -4,7 +4,7 @@ import './globals.css'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
-import { ScrollToTop } from '@/components/scroll-to-top'
+
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -60,7 +60,8 @@ export default function RootLayout({
         </main>
         <Footer />
         <WhatsAppButton />
-        <ScrollToTop />
+
+        
       </body>
     </html>
   )
