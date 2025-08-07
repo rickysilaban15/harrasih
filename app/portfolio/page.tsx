@@ -132,7 +132,7 @@ export default function PortfolioPage() {
       category: "ecommerce",
       industry: "Retail Industry",
       description: "Platform e-commerce berfitur lengkap dengan integrasi pembayaran",
-      image: "/images/E-commerce.png",
+      image: "/images/e-commerce.png",
       badge: "E-Commerce",
       badgeColor: "bg-blue-100 text-blue-800",
       technologies: ["React", "Node.js", "MongoDB"],
