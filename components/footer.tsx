@@ -1,6 +1,7 @@
 import { Separator } from "@/components/ui/separator"
 import { MapPin, Phone, Mail, Facebook, Linkedin, Instagram } from 'lucide-react'
 import Link from "next/link"
+import Image from 'next/image'
 
 export function Footer() {
   return (
@@ -9,11 +10,17 @@ export function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">H</span>
-              </div>
-              <span className="text-xl font-bold">PT. Harrasih</span>
-            </Link>
+  <div className="w-10 h-10 relative">
+    <Image 
+      src="/images/logo.png" 
+      alt="PT Harrasih Logo" 
+      fill 
+      className="object-contain rounded-lg" 
+    />
+  </div>
+  <span className="text-xl font-bold">PT. Harrasih</span>
+</Link>
+
             <p className="text-gray-400 leading-relaxed">
               Penyedia solusi digital terpercaya yang membantu bisnis Anda berkembang 
               di era digital dengan teknologi terdepan.
