@@ -1,21 +1,19 @@
 'use client'
 
 import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
-export function ScrollToTop() {
+export function AutoScrollTop() {
+  const pathname = usePathname()
+
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 300) {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        })
-      }
-    }
+    // Scroll to top when route changes
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }, [pathname]) // This effect runs whenever the pathname changes
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
-  return null
+  return null // This component doesn't render anything
 }
