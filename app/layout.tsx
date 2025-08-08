@@ -1,68 +1,66 @@
+// app/layout.tsx
 import type { Metadata } from 'next'
-import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
-import { WhatsAppButton } from '@/components/whatsapp-button'
-
-
-const inter = Inter({ 
-  subsets: ['latin'],
-  variable: '--font-inter'
-})
-
-const playfair = Playfair_Display({ 
-  subsets: ['latin'],
-  variable: '--font-playfair'
-})
 
 export const metadata: Metadata = {
-  title: 'PT.Harrasih - Solusi Digital Terpercaya | Website & Aplikasi Development',
-  description: 'PT.Harrasih adalah penyedia solusi digital terpercaya yang mengkhususkan diri dalam pengembangan website, aplikasi mobile, dan sistem informasi untuk membantu bisnis Anda berkembang di era digital.',
-  keywords: 'web development, aplikasi mobile, sistem informasi, e-commerce, company profile, digital solutions, jakarta, indonesia',
-  authors: [{ name: 'PT.Harrasih' }],
-  creator: 'PT.Harrasih',
-  publisher: 'PT.Harrasih',
-  robots: 'index, follow',
+  title: 'Harrasih - Solusi Teknologi & Inovasi',
+  description:
+    'Harrasih adalah penyedia solusi teknologi dan inovasi untuk bisnis Anda. Menghadirkan layanan modern dengan desain elegan dan performa tinggi.',
+  keywords: ['Harrasih', 'Teknologi', 'Inovasi', 'Bisnis', 'Website', 'Digital'],
+  authors: [{ name: 'Harrasih', url: 'https://harrasih.vercel.app' }],
   openGraph: {
-    type: 'website',
+    title: 'Harrasih - Solusi Teknologi & Inovasi',
+    description:
+      'Harrasih adalah penyedia solusi teknologi dan inovasi untuk bisnis Anda.',
+    url: 'https://harrasih.vercel.app',
+    siteName: 'Harrasih',
+    images: [
+      {
+        url: 'https://harrasih.vercel.app/images/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Logo Harrasih',
+      },
+    ],
     locale: 'id_ID',
-    url: 'https://harrasih.com',
-    title: 'PT.Harrasih - Solusi Digital Terpercaya',
-    description: 'Penyedia solusi digital terpercaya untuk website, aplikasi mobile, dan sistem informasi bisnis.',
-    siteName: 'PT.Harrasih',
+    type: 'website',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'PT.Harrasih - Solusi Digital Terpercaya',
-    description: 'Penyedia solusi digital terpercaya untuk website, aplikasi mobile, dan sistem informasi bisnis.',
-  },
-  generator: 'v0.dev',
-
- 
   icons: {
     icon: '/images/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
 }
 
+// JSON-LD Schema
+function JsonLd() {
+  const schemaData = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Harrasih',
+    url: 'https://harrasih.vercel.app',
+    logo: 'https://harrasih.vercel.app/logo.png',
+    sameAs: [
+      'href="https://www.facebook.com/ricki.silaban.1', // ganti jika ada
+      'https://www.instagram.com/harrasih', // ganti jika ada
+      'https://www.linkedin.com/in/ricky-steven-44a8a0292', // ganti jika ada
+    ],
+  }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
   return (
-    <html lang="id" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} font-sans`}>
-        <Header />
-        <main className="pt-20">
-          {children}
-        </main>
-        <Footer />
-        <WhatsAppButton />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+    />
+  )
+}
 
-        
-      </body>
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="id">
+      <head>
+        <JsonLd />
+      </head>
+      <body>{children}</body>
     </html>
   )
 }
