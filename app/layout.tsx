@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   creator: 'PT.Harrasih',
   publisher: 'PT.Harrasih',
   robots: 'index, follow',
+  metadataBase: new URL('https://harrasih.vercel.app'),
   openGraph: {
     type: 'website',
     locale: 'id_ID',
@@ -30,16 +31,26 @@ export const metadata: Metadata = {
     title: 'PT.Harrasih - Solusi Digital Terpercaya',
     description: 'Penyedia solusi digital terpercaya untuk website, aplikasi mobile, dan sistem informasi bisnis.',
     siteName: 'PT.Harrasih',
+    images: [
+      {
+        url: '/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'PT.Harrasih'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'PT.Harrasih - Solusi Digital Terpercaya',
     description: 'Penyedia solusi digital terpercaya untuk website, aplikasi mobile, dan sistem informasi bisnis.',
+    images: ['/images/og-image.png']
   },
-  generator: 'v0.dev',
   icons: {
-    icon: '/images/favicon.ico',
-  },
+    icon: '/favicon.ico',
+    shortcut: '/images/favicon.ico',
+    apple: '/images/apple-touch-icon.png',
+  }
 }
 
 // JSON-LD Schema
@@ -54,7 +65,7 @@ function JsonLd() {
       'https://www.facebook.com/ricki.silaban.1',
       'https://www.instagram.com/harrasih',
       'https://www.linkedin.com/in/ricky-steven-44a8a0292',
-    ],
+    ]
   }
 
   return (
@@ -73,6 +84,8 @@ export default function RootLayout({
   return (
     <html lang="id" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/images/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
         <JsonLd />
       </head>
       <body className={`${inter.variable} ${playfair.variable} font-sans`}>
