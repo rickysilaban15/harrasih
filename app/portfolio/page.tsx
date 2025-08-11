@@ -94,7 +94,7 @@ export default function PortfolioPage() {
      {
       id: 1,
       slug: "website-silabancoffee",
-      title: "Sistem Order Online SilabanCoffee",
+      title: "Sistem Order Online SilabanCoffee.png",
       category: "web",
       industry: "Cafe",
       description: "Website Profil Cafe Dan sistem Order Menu secara Online",
