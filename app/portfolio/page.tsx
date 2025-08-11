@@ -91,8 +91,25 @@ export default function PortfolioPage() {
   }
 
   const portfolioItems = [
-    {
+     {
       id: 1,
+      slug: "website-silabancoffee",
+      title: "Sistem Order Online SilabanCoffee",
+      category: "web",
+      industry: "Cafe",
+      description: "Website Profil Cafe Dan sistem Order Menu secara Online",
+      image: "/images/SilabanCoffee",
+      badge: "Web App",
+      badgeColor: "bg-green-100 text-green-800",
+      technologies: ["PHP", "MySQL", "Bootstrap"],
+      features: ["User Authentication", "Order Online", "Parking Online", "Admin Panel"],
+      client: "PT.Harrasih",
+      duration: "3 Bulan",
+      year: "2024",
+      link: "https://silabancoffee.gt.tc"
+    },
+    {
+      id: 2,
       slug: "library-information-system",
       title: "Library Information System",
       category: "web",
@@ -109,7 +126,7 @@ export default function PortfolioPage() {
       link: "https://ricky-perpustakaan.kesug.com"
     },
     {
-      id: 2,
+      id: 3,
       slug: "coffee-shop-landing-page",
       title: "Coffee Shop Landing Page",
       category: "web",
@@ -126,7 +143,7 @@ export default function PortfolioPage() {
       link: "https://rickysilaban15.github.io/clone-ngopi"
     },
     {
-      id: 3,
+      id: 4,
       slug: "ecommerce-website",
       title: "E-Commerce Website",
       category: "ecommerce",
@@ -143,7 +160,7 @@ export default function PortfolioPage() {
       link: "https://studio--e-commerce-storefront-viewer.us-central1.hosted.app/"
     },
     {
-      id: 4,
+      id: 5,
       slug: "restaurant-landing-page",
       title: "Restaurant Landing Page",
       category: "web",
@@ -160,7 +177,7 @@ export default function PortfolioPage() {
       link: "https://rickysilaban15.github.io/my-resto"
     },
     {
-      id: 5,
+      id: 6,
       slug: "portfolio-website",
       title: "Portfolio Website",
       category: "web",
@@ -177,7 +194,7 @@ export default function PortfolioPage() {
       link: "https://kive-silaban.free.nf"
     },
     {
-      id: 6,
+      id: 7,
       slug: "data-mining-application",
       title: "Data Mining Application",
       category: "web",
@@ -194,7 +211,7 @@ export default function PortfolioPage() {
       link: "https://clustering-datamining-ri.streamlit.app/"
     },
     {
-      id: 7,
+      id: 8,
       slug: "library-management-system",
       title: "Library Management System",
       category: "web",
@@ -211,7 +228,7 @@ export default function PortfolioPage() {
       link: "https://laban.wuaze.com/LibraryManagement/login.php"
     },
     {
-      id: 8,
+      id: 9,
       slug: "student-attendance-system",
       title: "Student Attendance System",
       category: "desktop",
@@ -228,7 +245,7 @@ export default function PortfolioPage() {
       link: "#"
     },
     {
-      id: 9,
+      id: 10,
       slug: "stevencoffee-transaction-system",
       title: "StevenCoffe - Coffee Shop Transaction System",
       category: "desktop",
@@ -245,7 +262,7 @@ export default function PortfolioPage() {
       link: "#"
     },
     {
-      id: 10,
+      id: 11,
       slug: "sistem-informasi-dikesag",
       title: "Sistem Maintenance Laptop",
       category: "web",
@@ -262,7 +279,7 @@ export default function PortfolioPage() {
       link: "https://dikesag.kesug.com"
     },
     {
-      id: 11,
+      id: 12,
       slug: "kosapp-manajemen-kos",
       title: "KosApp - Aplikasi Manajemen Kos",
       category: "mobile",
@@ -279,7 +296,7 @@ export default function PortfolioPage() {
       link: "https://preview.builtwithrocket.new/kosapp-3n11y93"
     },
     {
-      id: 12,
+      id: 13,
       slug: "topsky-topup-game",
       title: "TopSky - Website TOP-Up Game",
       category: "ecommerce",
@@ -296,7 +313,7 @@ export default function PortfolioPage() {
       link: "https://topsky.vercel.app"
     },
     {
-      id: 13,
+      id: 14,
       slug: "Website-Kosan",
       title: "CariTempat",
       category: "web",
@@ -313,7 +330,7 @@ export default function PortfolioPage() {
       link: "#"
     },
     {
-      id: 14,
+      id: 15,
       slug: "Website-wisata",
       title: "Wisata Tarutung",
       category: "web",
@@ -330,7 +347,7 @@ export default function PortfolioPage() {
       link: "https://wisata-tarutung.vercel.app"
     },
     {
-      id: 15,
+      id: 16,
       slug: "website-Company",
       title: "PT.Harrasih",
       category: "web",
@@ -347,7 +364,7 @@ export default function PortfolioPage() {
       link: "harrasih.vercel.app"
     },
     {
-      id: 16,
+      id: 17,
       slug: "Tabunan-Pribadi",
       title: "Tabunganku",
       category: "web",
