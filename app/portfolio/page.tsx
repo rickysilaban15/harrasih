@@ -94,11 +94,11 @@ export default function PortfolioPage() {
      {
       id: 1,
       slug: "website-silabancoffee",
-      title: "Sistem Order Online SilabanCoffee.png",
+      title: "Sistem Order Online SilabanCoffee",
       category: "web",
       industry: "Cafe",
       description: "Website Profil Cafe Dan sistem Order Menu secara Online",
-      image: "/images/SilabanCoffee",
+      image: "/images/SilabanCoffee.png",
       badge: "Web App",
       badgeColor: "bg-green-100 text-green-800",
       technologies: ["PHP", "MySQL", "Bootstrap"],
