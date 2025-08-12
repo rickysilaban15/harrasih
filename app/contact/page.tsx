@@ -36,13 +36,18 @@ export default function ContactPage() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000))
-      setSubmitStatus('success')
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    });
+
+    if (res.ok) {
+      setSubmitStatus('success');
       setFormData({
         name: '',
         email: '',
@@ -51,14 +56,18 @@ export default function ContactPage() {
         service: '',
         budget: '',
         message: ''
-      })
-    } catch (error) {
-      setSubmitStatus('error')
-    } finally {
-      setIsSubmitting(false)
-      setTimeout(() => setSubmitStatus('idle'), 5000)
+      });
+    } else {
+      setSubmitStatus('error');
     }
+  } catch {
+    setSubmitStatus('error');
+  } finally {
+    setIsSubmitting(false);
+    setTimeout(() => setSubmitStatus('idle'), 5000);
   }
+};
+
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("Halo PT. Harrasih, saya tertarik untuk konsultasi tentang layanan digital Anda.")
