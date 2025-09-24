@@ -98,7 +98,7 @@ export default function PortfolioPage() {
       category: "web",
       industry: "Cafe",
       description: "Website Profil Cafe Dan sistem Order Menu secara Online",
-      image: "public/images/SilabanCoffee.png",
+      image: "/images/SilabanCoffee.png",
       badge: "Web App",
       badgeColor: "bg-green-100 text-green-800",
       technologies: ["PHP", "MySQL", "Bootstrap"],
